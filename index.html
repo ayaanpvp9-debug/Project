@@ -3,37 +3,36 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="color-scheme" content="dark">
 <meta name="description" content="TECHVERSE — an offline interactive digital hardware laboratory. Learn how computers and smartphones work through Canvas simulations, experiments and quizzes.">
 <title>TECHVERSE — The Interactive Digital Hardware Laboratory</title>
 </head>
 <body>
 
-<a class="skip-link" href="#main-content">Skip to lesson content</a>
+<a href="#main-content">Skip to lesson content</a>
 
-<header class="page-header">
-  <div class="brand">
+<header>
+  <div>
     <canvas id="brand-mark" width="180" height="90" aria-hidden="true"></canvas>
-    <div class="brand-text">
-      <p class="eyebrow">Interactive Digital Hardware Laboratory</p>
-      <h1 class="brand-title">TECH<span class="accent">VERSE</span></h1>
-      <p class="brand-sub" id="brand-subtitle">Signal online — every block below is drawn with Canvas</p>
+    <div>
+      <p>Interactive Digital Hardware Laboratory</p>
+      <h1>TECHVERSE</h1>
+      <p id="brand-subtitle">Signal online — every block below is drawn with Canvas</p>
     </div>
   </div>
-  <div class="header-tools">
-    <p class="status-line" id="system-status">SYSTEM STATUS: STARTING…</p>
-    <div class="header-actions">
-      <button type="button" id="btn-help" class="control">Quick Guide</button>
-      <button type="button" id="btn-sound" class="control" aria-pressed="true">Sound: On</button>
-      <button type="button" id="btn-motion" class="control" aria-pressed="true">Motion: On</button>
-      <button type="button" id="btn-reset-progress" class="control danger">Reset Data</button>
+  <div>
+    <p id="system-status">SYSTEM STATUS: STARTING…</p>
+    <div>
+      <button type="button" id="btn-help">Quick Guide</button>
+      <button type="button" id="btn-sound" aria-pressed="true">Sound: On</button>
+      <button type="button" id="btn-motion" aria-pressed="true">Motion: On</button>
+      <button type="button" id="btn-reset-progress">Reset Data</button>
     </div>
-    <p class="progress-summary" id="progress-summary">XP 0 · Badges 0 · Accuracy —</p>
+    <p id="progress-summary">XP 0 · Badges 0 · Accuracy —</p>
   </div>
 </header>
 
-<nav class="lab-nav" aria-label="Laboratory sections">
-  <ol class="nav-list" id="lab-nav-list"></ol>
+<nav aria-label="Laboratory sections">
+  <ol id="lab-nav-list"></ol>
 </nav>
 
 <main id="main-content" tabindex="-1">
@@ -41,39 +40,39 @@
   <!-- ============================================================
        SECTION 1 · COMPUTER HARDWARE LABORATORY
        ============================================================ -->
-  <section id="section-computer" class="lab-section" data-title="Computer Hardware Lab" aria-labelledby="computer-heading">
-    <header class="section-header">
-      <p class="eyebrow">Section 01 · Component Theatre</p>
+  <section id="section-computer" data-lab-section data-title="Computer Hardware Lab" aria-labelledby="computer-heading">
+    <header>
+      <p>Section 01 · Component Theatre</p>
       <h2 id="computer-heading">Computer Hardware Laboratory</h2>
-      <p class="lead">Pick a component, learn what it actually does, then run the demonstration.
+      <p>Pick a component, learn what it actually does, then run the demonstration.
         Every drawing adjusts live to the controls — nothing here is a slide show.</p>
     </header>
 
-    <div class="layout-lesson">
-      <nav class="component-nav" id="computer-component-nav" aria-label="Computer components"></nav>
+    <div>
+      <nav id="computer-component-nav" aria-label="Computer components"></nav>
 
-      <div class="lesson-stack">
-        <article class="lesson-card" id="computer-lesson" aria-live="polite">
-          <p class="placeholder-note">Loading component lessons…</p>
+      <div>
+        <article id="computer-lesson" aria-live="polite">
+          <p>Loading component lessons…</p>
         </article>
 
-        <article class="stage-card">
-          <header class="stage-head">
-            <p class="eyebrow">Live demonstration</p>
+        <article>
+          <header>
+            <p>Live demonstration</p>
             <h3 id="computer-stage-title">Component stage</h3>
-            <p class="stage-caption" id="computer-stage-caption">Choose a component to begin.</p>
+            <p id="computer-stage-caption">Choose a component to begin.</p>
           </header>
-          <div class="canvas-frame" id="computer-stage-frame">
-            <canvas id="computer-stage-canvas" class="stage-canvas" width="960" height="600" role="img"
+          <div id="computer-stage-frame">
+            <canvas id="computer-stage-canvas" width="960" height="600" role="img"
                     aria-label="Interactive computer hardware demonstration"></canvas>
           </div>
-          <div class="stage-controls" id="computer-stage-controls"></div>
-          <p class="sim-note"><strong>Simplified model:</strong> <span id="computer-stage-note">Educational drawing, not to scale.</span></p>
+          <div id="computer-stage-controls"></div>
+          <p><strong>Simplified model:</strong> <span id="computer-stage-note">Educational drawing, not to scale.</span></p>
         </article>
       </div>
     </div>
 
-    <aside class="accuracy-card" aria-labelledby="computer-misconception">
+    <aside aria-labelledby="computer-misconception">
       <h3 id="computer-misconception">Classic mix-up to avoid</h3>
       <p>RAM is <em>working memory</em> — fast, small and wiped on power-off. Storage (SSD/HDD) is the
         <em>warehouse</em> — slower, large and keeps data without power. A program must be copied from
@@ -84,39 +83,39 @@
   <!-- ============================================================
        SECTION 2 · SMARTPHONE HARDWARE LABORATORY
        ============================================================ -->
-  <section id="section-smartphone" class="lab-section" data-title="Smartphone Lab" aria-labelledby="smartphone-heading">
-    <header class="section-header">
-      <p class="eyebrow">Section 02 · Pocket Mainframe</p>
+  <section id="section-smartphone" data-lab-section data-title="Smartphone Lab" aria-labelledby="smartphone-heading">
+    <header>
+      <p>Section 02 · Pocket Mainframe</p>
       <h2 id="smartphone-heading">Smartphone Hardware Laboratory</h2>
-      <p class="lead">A phone is the same story at 1/50th the size: one chip (the SoC) holds the CPU, GPU,
+      <p>A phone is the same story at 1/50th the size: one chip (the SoC) holds the CPU, GPU,
         AI accelerator, camera pipeline and radio modem, all sharing one pool of memory.</p>
     </header>
 
-    <div class="layout-lesson">
-      <nav class="component-nav" id="phone-component-nav" aria-label="Smartphone components"></nav>
+    <div>
+      <nav id="phone-component-nav" aria-label="Smartphone components"></nav>
 
-      <div class="lesson-stack">
-        <article class="lesson-card" id="smartphone-lesson" aria-live="polite">
-          <p class="placeholder-note">Loading component lessons…</p>
+      <div>
+        <article id="smartphone-lesson" aria-live="polite">
+          <p>Loading component lessons…</p>
         </article>
 
-        <article class="stage-card">
-          <header class="stage-head">
-            <p class="eyebrow">Live demonstration</p>
+        <article>
+          <header>
+            <p>Live demonstration</p>
             <h3 id="smartphone-stage-title">Phone stage</h3>
-            <p class="stage-caption" id="smartphone-stage-caption">Choose a component to begin.</p>
+            <p id="smartphone-stage-caption">Choose a component to begin.</p>
           </header>
-          <div class="canvas-frame" id="smartphone-stage-frame">
-            <canvas id="smartphone-stage-canvas" class="stage-canvas" width="960" height="600" role="img"
+          <div id="smartphone-stage-frame">
+            <canvas id="smartphone-stage-canvas" width="960" height="600" role="img"
                     aria-label="Interactive smartphone hardware demonstration"></canvas>
           </div>
-          <div class="stage-controls" id="smartphone-stage-controls"></div>
-          <p class="sim-note"><strong>Simplified model:</strong> <span id="smartphone-stage-note">Educational drawing, not to scale.</span></p>
+          <div id="smartphone-stage-controls"></div>
+          <p><strong>Simplified model:</strong> <span id="smartphone-stage-note">Educational drawing, not to scale.</span></p>
         </article>
       </div>
     </div>
 
-    <article class="accuracy-card">
+    <article>
       <h3>How the parts talk to each other</h3>
       <p>The <strong>SoC</strong> is the traffic centre. The camera's <strong>ISP</strong> writes processed frames into
         shared memory, the <strong>GPU</strong> reads them, the <strong>display controller</strong> sends them to the panel,
@@ -127,52 +126,52 @@
   <!-- ============================================================
        SECTION 3 · VIRTUAL DEVICE DISASSEMBLY
        ============================================================ -->
-  <section id="section-disassembly" class="lab-section" data-title="Disassembly Bay" aria-labelledby="disassembly-heading">
-    <header class="section-header">
-      <p class="eyebrow">Section 03 · Virtual Teardown</p>
+  <section id="section-disassembly" data-lab-section data-title="Disassembly Bay" aria-labelledby="disassembly-heading">
+    <header>
+      <p>Section 03 · Virtual Teardown</p>
       <h2 id="disassembly-heading">Virtual Device Disassembly</h2>
-      <p class="lead">Peel a laptop and a phone apart without voiding a warranty. Drag the slider to explode the
+      <p>Peel a laptop and a phone apart without voiding a warranty. Drag the slider to explode the
         view, tap any part to identify it, and switch layers on and off.</p>
     </header>
 
-    <div class="layout-workshop">
-      <article class="stage-card">
-        <header class="stage-head">
-          <p class="eyebrow">Exploded view</p>
+    <div>
+      <article>
+        <header>
+          <p>Exploded view</p>
           <h3 id="disassembly-title">Device explorer</h3>
-          <p class="stage-caption">Select a device, then drag the explosion slider or click a component.</p>
+          <p>Select a device, then drag the explosion slider or click a component.</p>
         </header>
-        <div class="canvas-frame">
-          <canvas id="disassembly-canvas" class="stage-canvas" width="960" height="620" role="img"
+        <div>
+          <canvas id="disassembly-canvas" width="960" height="620" role="img"
                   aria-label="Interactive exploded view of a device"></canvas>
         </div>
-        <div class="stage-controls" id="disassembly-controls">
-          <label class="control control-range" for="disassembly-explode">
+        <div id="disassembly-controls">
+          <label for="disassembly-explode">
             <span>Explosion <output id="disassembly-explode-out" for="disassembly-explode">40%</output></span>
             <input type="range" id="disassembly-explode" min="0" max="100" value="40">
           </label>
-          <button type="button" class="control" id="disassembly-labels" aria-pressed="true">Labels: On</button>
-          <button type="button" class="control" id="disassembly-views" aria-pressed="false">Internal view: Off</button>
-          <button type="button" class="control" id="disassembly-autorotate" aria-pressed="false">Auto-explode: Off</button>
+          <button type="button" id="disassembly-labels" aria-pressed="true">Labels: On</button>
+          <button type="button" id="disassembly-views" aria-pressed="false">Internal view: Off</button>
+          <button type="button" id="disassembly-autorotate" aria-pressed="false">Auto-explode: Off</button>
         </div>
-        <p class="sim-note"><strong>Simplified model:</strong> Layer order and part sizes are educational approximations, not repair instructions.</p>
+        <p><strong>Simplified model:</strong> Layer order and part sizes are educational approximations, not repair instructions.</p>
       </article>
 
-      <aside class="panel-stack">
-        <article class="panel-card">
+      <aside>
+        <article>
           <h3>Device</h3>
-          <div class="segmented" id="disassembly-device-picker" role="group" aria-label="Choose device"></div>
-          <p id="disassembly-device-note" class="muted"></p>
+          <div id="disassembly-device-picker" role="group" aria-label="Choose device"></div>
+          <p id="disassembly-device-note"></p>
         </article>
-        <article class="panel-card" id="disassembly-part-card" aria-live="polite">
+        <article id="disassembly-part-card" aria-live="polite">
           <h3 id="disassembly-part-name">No component selected</h3>
-          <p id="disassembly-part-kind" class="muted"></p>
+          <p id="disassembly-part-kind"></p>
           <p id="disassembly-part-desc">Click a component in the exploded view, or pick one from the list.</p>
-          <ul id="disassembly-part-facts" class="fact-list"></ul>
+          <ul id="disassembly-part-facts"></ul>
         </article>
-        <article class="panel-card">
+        <article>
           <h3>Component list</h3>
-          <div class="chip-list" id="disassembly-part-list"></div>
+          <div id="disassembly-part-list"></div>
         </article>
       </aside>
     </div>
@@ -181,63 +180,63 @@
   <!-- ============================================================
        SECTION 4 · DATA JOURNEY SIMULATOR
        ============================================================ -->
-  <section id="section-journey" class="lab-section" data-title="Data Journey" aria-labelledby="journey-heading">
-    <header class="section-header">
-      <p class="eyebrow">Section 04 · The Long Way Round</p>
+  <section id="section-journey" data-lab-section data-title="Data Journey" aria-labelledby="journey-heading">
+    <header>
+      <p>Section 04 · The Long Way Round</p>
       <h2 id="journey-heading">Data Journey Simulator</h2>
-      <p class="lead">Follow one launch request from the moment you tap an icon until pixels glow.
+      <p>Follow one launch request from the moment you tap an icon until pixels glow.
         Packets move through real hardware paths — simplified, but in the correct order.</p>
     </header>
 
-    <div class="layout-workshop">
-      <article class="stage-card">
-        <header class="stage-head">
+    <div>
+      <article>
+        <header>
           <div>
-            <p class="eyebrow">Flight recorder</p>
+            <p>Flight recorder</p>
             <h3 id="journey-stage-title">Computer launch sequence</h3>
           </div>
-          <p class="stage-caption" id="journey-progress-text">Stage 0 of 7</p>
+          <p id="journey-progress-text">Stage 0 of 7</p>
         </header>
-        <div class="canvas-frame">
-          <canvas id="journey-canvas" class="stage-canvas" width="960" height="600" role="img"
+        <div>
+          <canvas id="journey-canvas" width="960" height="600" role="img"
                   aria-label="Animated data flow between storage, memory, CPU, GPU and display"></canvas>
         </div>
-        <div class="stage-controls" id="journey-controls">
-          <div class="segmented" id="journey-device-picker" role="group" aria-label="Choose device"></div>
-          <button type="button" class="control primary" id="journey-play">▶ Play</button>
-          <button type="button" class="control" id="journey-pause">Pause</button>
-          <button type="button" class="control" id="journey-reset">Reset</button>
-          <button type="button" class="control" id="journey-step">Step ›</button>
-          <label class="control control-range" for="journey-speed">
+        <div id="journey-controls">
+          <div id="journey-device-picker" role="group" aria-label="Choose device"></div>
+          <button type="button" id="journey-play">▶ Play</button>
+          <button type="button" id="journey-pause">Pause</button>
+          <button type="button" id="journey-reset">Reset</button>
+          <button type="button" id="journey-step">Step ›</button>
+          <label for="journey-speed">
             <span>Speed <output id="journey-speed-out" for="journey-speed">1.0×</output></span>
             <input type="range" id="journey-speed" min="25" max="300" step="25" value="100">
           </label>
         </div>
-        <canvas id="journey-progress-canvas" class="progress-canvas" width="880" height="14" aria-hidden="true"></canvas>
-        <div class="stage-controls">
-          <button type="button" class="control" id="journey-prev-stage">‹ Previous stage</button>
-          <button type="button" class="control" id="journey-next-stage">Next stage ›</button>
+        <canvas id="journey-progress-canvas" width="880" height="14" aria-hidden="true"></canvas>
+        <div>
+          <button type="button" id="journey-prev-stage">‹ Previous stage</button>
+          <button type="button" id="journey-next-stage">Next stage ›</button>
         </div>
       </article>
 
-      <aside class="panel-stack">
-        <article class="panel-card">
+      <aside>
+        <article>
           <h3>Why this order matters</h3>
           <p>The CPU can only execute instructions that are already in <strong>RAM</strong>. Storage is far
             too slow to feed a CPU core directly, so the operating system copies the program in, then the CPU
             jumps to its first instruction. Graphics are a second pipeline: the GPU builds an image in VRAM
             and the display controller streams it to the screen.</p>
         </article>
-        <article class="panel-card" id="journey-stage-card" aria-live="polite">
+        <article id="journey-stage-card" aria-live="polite">
           <h3 id="journey-stage-name">Ready</h3>
           <p id="journey-stage-desc">Press Play to launch the application.</p>
-          <dl class="meter-list" id="journey-meters"></dl>
+          <dl id="journey-meters"></dl>
         </article>
-        <article class="panel-card">
+        <article>
           <h3>Stage log</h3>
-          <ol class="stage-log" id="journey-log"></ol>
+          <ol id="journey-log"></ol>
         </article>
-        <details class="panel-card disclosure">
+        <details>
           <summary>Simplified model vs. a real operating system</summary>
           <p>Real launches involve a scheduler, virtual memory and page tables, device drivers, file-system
             caching, a compositor and the window system. This simulator shows the essential data path in
@@ -250,47 +249,47 @@
   <!-- ============================================================
        SECTION 5 · HARDWARE EXPERIMENT LABORATORY
        ============================================================ -->
-  <section id="section-experiments" class="lab-section" data-title="Experiment Lab" aria-labelledby="experiments-heading">
-    <header class="section-header">
-      <p class="eyebrow">Section 05 · Stress Bench</p>
+  <section id="section-experiments" data-lab-section data-title="Experiment Lab" aria-labelledby="experiments-heading">
+    <header>
+      <p>Section 05 · Stress Bench</p>
       <h2 id="experiments-heading">Hardware Experiment Laboratory</h2>
-      <p class="lead">Push a simulated machine into uncomfortable territory and watch what the system does.
+      <p>Push a simulated machine into uncomfortable territory and watch what the system does.
         Every number below is generated by the model on this page — treat it as a teaching demonstration,
         never as a measurement of real hardware.</p>
     </header>
 
-    <div class="layout-workshop">
-      <article class="stage-card">
-        <header class="stage-head">
-          <p class="eyebrow">Test bench</p>
+    <div>
+      <article>
+        <header>
+          <p>Test bench</p>
           <h3 id="experiment-stage-title">Experiment A · RAM fills up</h3>
-          <p class="stage-caption" id="experiment-stage-caption">Load the workload and observe.</p>
+          <p id="experiment-stage-caption">Load the workload and observe.</p>
         </header>
-        <div class="canvas-frame">
-          <canvas id="experiment-canvas" class="stage-canvas" width="960" height="560" role="img"
+        <div>
+          <canvas id="experiment-canvas" width="960" height="560" role="img"
                   aria-label="Experiment visualisation"></canvas>
         </div>
-        <div class="stage-controls" id="experiment-controls"></div>
+        <div id="experiment-controls"></div>
       </article>
 
-      <aside class="panel-stack">
-        <article class="panel-card">
+      <aside>
+        <article>
           <h3>Experiment</h3>
-          <div class="segmented segmented-wrap" id="experiment-picker" role="group" aria-label="Choose experiment"></div>
-          <p id="experiment-intro" class="muted"></p>
+          <div id="experiment-picker" role="group" aria-label="Choose experiment"></div>
+          <p id="experiment-intro"></p>
         </article>
-        <article class="panel-card">
+        <article>
           <h3>Independent variables</h3>
           <div id="experiment-variables"></div>
-          <button type="button" class="control primary wide" id="experiment-run">Run experiment</button>
+          <button type="button" id="experiment-run">Run experiment</button>
         </article>
-        <article class="panel-card" id="experiment-result-card" aria-live="polite">
+        <article id="experiment-result-card" aria-live="polite">
           <h3>Prediction</h3>
           <p id="experiment-result">Choose values, then run. Try predicting first!</p>
-          <ul class="fact-list" id="experiment-findings"></ul>
-          <p class="sim-note" id="experiment-disclaimer">Simulated values only.</p>
+          <ul id="experiment-findings"></ul>
+          <p id="experiment-disclaimer">Simulated values only.</p>
         </article>
-        <article class="panel-card">
+        <article>
           <h3>What is really happening?</h3>
           <p id="experiment-explainer"></p>
         </article>
@@ -301,34 +300,34 @@
   <!-- ============================================================
        SECTION 6 · BUILD YOUR OWN COMPUTER
        ============================================================ -->
-  <section id="section-builder" class="lab-section" data-title="PC Builder" aria-labelledby="builder-heading">
-    <header class="section-header">
-      <p class="eyebrow">Section 06 · Screwdriver Time</p>
+  <section id="section-builder" data-lab-section data-title="PC Builder" aria-labelledby="builder-heading">
+    <header>
+      <p>Section 06 · Screwdriver Time</p>
       <h2 id="builder-heading">Build Your Own Computer</h2>
-      <p class="lead">Choose a part in each slot. TECHVERSE checks sockets, memory generation, form factor
+      <p>Choose a part in each slot. TECHVERSE checks sockets, memory generation, form factor
         and power headroom before you "buy" anything. All part data is fictional and educational.</p>
     </header>
 
-    <div class="layout-workshop">
-      <div class="build-slots" id="builder-slots"></div>
+    <div>
+      <div id="builder-slots"></div>
 
-      <aside class="panel-stack">
-        <article class="stage-card">
-          <header class="stage-head">
-            <p class="eyebrow">Compatibility report</p>
+      <aside>
+        <article>
+          <header>
+            <p>Compatibility report</p>
             <h3 id="builder-verdict">Select parts</h3>
           </header>
-          <div class="canvas-frame canvas-frame-compact">
-            <canvas id="builder-canvas" class="stage-canvas" width="900" height="420" role="img"
+          <div>
+            <canvas id="builder-canvas" width="900" height="420" role="img"
                     aria-label="Assembled computer preview"></canvas>
           </div>
-          <div class="panel-card">
-            <dl class="meter-list" id="builder-meters"></dl>
-            <ul class="check-list" id="builder-checks" aria-live="polite"></ul>
+          <div>
+            <dl id="builder-meters"></dl>
+            <ul id="builder-checks" aria-live="polite"></ul>
           </div>
-          <div class="stage-controls">
-            <button type="button" class="control primary" id="builder-autobuild">Auto-build a valid PC</button>
-            <button type="button" class="control" id="builder-clear">Clear</button>
+          <div>
+            <button type="button" id="builder-autobuild">Auto-build a valid PC</button>
+            <button type="button" id="builder-clear">Clear</button>
           </div>
         </article>
       </aside>
@@ -338,105 +337,105 @@
   <!-- ============================================================
        SECTION 7 · KNOWLEDGE CENTRE
        ============================================================ -->
-  <section id="section-knowledge" class="lab-section" data-title="Knowledge Centre" aria-labelledby="knowledge-heading">
-    <header class="section-header">
-      <p class="eyebrow">Section 07 · The Manual</p>
+  <section id="section-knowledge" data-lab-section data-title="Knowledge Centre" aria-labelledby="knowledge-heading">
+    <header>
+      <p>Section 07 · The Manual</p>
       <h2 id="knowledge-heading">Interactive Knowledge Centre</h2>
-      <p class="lead">A searchable hardware encyclopedia: definitions, comparisons, misconceptions and
+      <p>A searchable hardware encyclopedia: definitions, comparisons, misconceptions and
         real-world examples. Type anything — "cache", "OLED", "PSU" — or filter by device.</p>
     </header>
 
-    <div class="knowledge-tools">
-      <label class="control control-field" for="knowledge-search">
+    <div>
+      <label for="knowledge-search">
         <span>Search</span>
         <input type="search" id="knowledge-search" placeholder="Search 40+ entries, e.g. thr, VRAM, NAND" autocomplete="off">
       </label>
-      <div class="segmented" id="knowledge-filter" role="group" aria-label="Filter entries"></div>
-      <p class="muted" id="knowledge-count">—</p>
+      <div id="knowledge-filter" role="group" aria-label="Filter entries"></div>
+      <p id="knowledge-count">—</p>
     </div>
 
-    <div class="knowledge-grid" id="knowledge-grid"></div>
-    <p class="empty-state" id="knowledge-empty" hidden>No entries matched. Try a shorter word or clear the filter.</p>
+    <div id="knowledge-grid"></div>
+    <p id="knowledge-empty" hidden>No entries matched. Try a shorter word or clear the filter.</p>
 
-    <article class="panel-card">
+    <article>
       <h3>Comparison tables</h3>
-      <p class="muted">These tables are the fastest way to answer judge questions about "what is the difference…".</p>
-      <div class="table-scroll" id="knowledge-tables"></div>
+      <p>These tables are the fastest way to answer judge questions about "what is the difference…".</p>
+      <div id="knowledge-tables"></div>
     </article>
   </section>
 
   <!-- ============================================================
        SECTION 8 · INTERACTIVE ASSESSMENTS
        ============================================================ -->
-  <section id="section-assessments" class="lab-section" data-title="Assessments" aria-labelledby="assessments-heading">
-    <header class="section-header">
-      <p class="eyebrow">Section 08 · Prove It</p>
+  <section id="section-assessments" data-lab-section data-title="Assessments" aria-labelledby="assessments-heading">
+    <header>
+      <p>Section 08 · Prove It</p>
       <h2 id="assessments-heading">Interactive Assessments</h2>
-      <p class="lead">Three round lengths, three difficulty levels, four question types — including
+      <p>Three round lengths, three difficulty levels, four question types — including
         "which component is highlighted?" and troubleshooting scenarios.</p>
     </header>
 
-    <div class="layout-workshop">
-      <article class="stage-card">
-        <header class="stage-head">
+    <div>
+      <article>
+        <header>
           <div>
-            <p class="eyebrow">Assessment chamber</p>
+            <p>Assessment chamber</p>
             <h3 id="assessment-title">Choose your challenge</h3>
           </div>
-          <p class="stage-caption" id="assessment-progress">Not started</p>
+          <p id="assessment-progress">Not started</p>
         </header>
 
-        <div class="panel-card" id="assessment-setup">
+        <div id="assessment-setup">
           <h3>Setup</h3>
-          <div class="segmented segmented-wrap" id="assessment-difficulty" role="group" aria-label="Difficulty"></div>
-          <div class="segmented segmented-wrap" id="assessment-mode" role="group" aria-label="Question type"></div>
-          <div class="segmented segmented-wrap" id="assessment-length" role="group" aria-label="Round length"></div>
-          <button type="button" class="control primary wide" id="assessment-start">Start assessment</button>
+          <div id="assessment-difficulty" role="group" aria-label="Difficulty"></div>
+          <div id="assessment-mode" role="group" aria-label="Question type"></div>
+          <div id="assessment-length" role="group" aria-label="Round length"></div>
+          <button type="button" id="assessment-start">Start assessment</button>
         </div>
 
         <div id="assessment-question-panel" hidden>
-          <canvas id="assessment-progress-canvas" class="progress-canvas" width="880" height="14" aria-hidden="true"></canvas>
-          <div class="canvas-frame canvas-frame-compact" id="assessment-canvas-frame" hidden>
-            <canvas id="assessment-canvas" class="stage-canvas" width="900" height="360" role="img"
+          <canvas id="assessment-progress-canvas" width="880" height="14" aria-hidden="true"></canvas>
+          <div id="assessment-canvas-frame" hidden>
+            <canvas id="assessment-canvas" width="900" height="360" role="img"
                     aria-label="Components highlighted for identification"></canvas>
           </div>
           <h3 id="assessment-question">Question</h3>
-          <p class="muted" id="assessment-hint"></p>
-          <div class="answer-list" id="assessment-answers"></div>
-          <p class="feedback" id="assessment-feedback" aria-live="polite"></p>
-          <div class="stage-controls">
-            <button type="button" class="control primary" id="assessment-next" hidden>Next question ›</button>
-            <button type="button" class="control" id="assessment-quit">End round</button>
+          <p id="assessment-hint"></p>
+          <div id="assessment-answers"></div>
+          <p id="assessment-feedback" aria-live="polite"></p>
+          <div>
+            <button type="button" id="assessment-next" hidden>Next question ›</button>
+            <button type="button" id="assessment-quit">End round</button>
           </div>
         </div>
 
         <div id="assessment-summary" hidden>
           <h3 id="assessment-summary-title">Round complete</h3>
           <p id="assessment-summary-text"></p>
-          <ul class="fact-list" id="assessment-summary-list"></ul>
-          <div class="stage-controls">
-            <button type="button" class="control primary" id="assessment-again">Play again</button>
-            <button type="button" class="control" id="assessment-review">See what to revise</button>
+          <ul id="assessment-summary-list"></ul>
+          <div>
+            <button type="button" id="assessment-again">Play again</button>
+            <button type="button" id="assessment-review">See what to revise</button>
           </div>
           <div id="assessment-review-box" hidden>
             <h3>Revision targets</h3>
-            <ul class="check-list" id="assessment-review-list"></ul>
+            <ul id="assessment-review-list"></ul>
           </div>
         </div>
       </article>
 
-      <aside class="panel-stack">
-        <article class="panel-card">
+      <aside>
+        <article>
           <h3>Achievements</h3>
-          <p class="muted">Earned automatically as you explore. Saved in this browser only.</p>
-          <ul class="badge-grid" id="achievement-list"></ul>
+          <p>Earned automatically as you explore. Saved in this browser only.</p>
+          <ul id="achievement-list"></ul>
         </article>
-        <article class="panel-card">
+        <article>
           <h3>Progress</h3>
-          <dl class="meter-list" id="assessment-stats"></dl>
-          <button type="button" class="control wide" id="assessment-reset-stats">Clear assessment history</button>
+          <dl id="assessment-stats"></dl>
+          <button type="button" id="assessment-reset-stats">Clear assessment history</button>
         </article>
-        <article class="panel-card">
+        <article>
           <h3>How scoring works</h3>
           <p>Each correct answer earns XP scaled by difficulty (Easy ×1, Medium ×1.5, Hard ×2) and by a
             first-try bonus. Difficulty also decides how many points a question is worth,
@@ -449,38 +448,38 @@
   <!-- ============================================================
        DOCUMENTATION
        ============================================================ -->
-  <section id="section-docs" class="lab-section" data-title="Project Docs" aria-labelledby="docs-heading">
-    <header class="section-header">
-      <p class="eyebrow">Section 09 · Open the hood</p>
+  <section id="section-docs" data-lab-section data-title="Project Docs" aria-labelledby="docs-heading">
+    <header>
+      <p>Section 09 · Open the hood</p>
       <h2 id="docs-heading">Project Documentation</h2>
-      <p class="lead">Everything a judge or teacher may ask: the function list, the architecture, how the
+      <p>Everything a judge or teacher may ask: the function list, the architecture, how the
         Canvas animations work, and a 6-minute demonstration script.</p>
     </header>
 
-    <div class="docs-tabs segmented segmented-wrap" id="docs-tabs" role="tablist" aria-label="Documentation pages"></div>
-    <article class="lesson-card docs-body" id="docs-body" aria-live="polite"></article>
+    <div id="docs-tabs" role="tablist" aria-label="Documentation pages"></div>
+    <article id="docs-body" aria-live="polite"></article>
   </section>
 
 </main>
 
-<footer class="page-footer">
+<footer>
   <p><strong>TECHVERSE</strong> is a single offline <code>index.html</code> built with semantic HTML, vanilla
     JavaScript and the Canvas API only — no CSS, no libraries, no network.</p>
-  <p class="muted">All component data, measurements and outcomes in the simulations are educational
+  <p>All component data, measurements and outcomes in the simulations are educational
     approximations. They are not benchmarks of real products.</p>
 </footer>
 
 <!-- Live region used by screen readers for every important action -->
-<p class="visually-silent" id="live-region" role="status" aria-live="polite"></p>
+<p id="live-region" role="status" aria-live="polite"></p>
 
 <!-- Quick guide dialog -->
 <dialog id="quick-guide" aria-labelledby="quick-guide-title">
   <header>
     <h2 id="quick-guide-title">Quick guide</h2>
-    <button type="button" class="control" id="quick-guide-close">Close</button>
+    <button type="button" id="quick-guide-close">Close</button>
   </header>
   <p>TECHVERSE has nine sections. Use the numbered navigation strip, or these shortcuts:</p>
-  <ul class="fact-list">
+  <ul>
     <li><strong>1 Computer Lab</strong> — CPU, RAM, storage, GPU, motherboard and peripherals.</li>
     <li><strong>2 Smartphone Lab</strong> — SoC, memory, battery, display, camera, radios.</li>
     <li><strong>3 Disassembly Bay</strong> — explode a laptop or phone and tap the parts.</li>
@@ -495,29 +494,6 @@
 </dialog>
 
 <script>
-/* ===========================================================================
-   TECHVERSE — THE INTERACTIVE DIGITAL HARDWARE LABORATORY
-   ---------------------------------------------------------------------------
-   Single-file application. Semantic HTML5 + vanilla JavaScript + Canvas API.
-   No CSS, no frameworks, no libraries, no network requests.
-
-   The script is organised into fourteen numbered parts:
-     1  Core engine (helpers, palette, CanvasStage, storage, router)
-     2  Computer laboratory content data
-     3  Computer renderer, CPU and RAM scenes
-     4  Remaining computer scenes
-     5  Smartphone content data
-     6  Smartphone renderer and scenes
-     7  Virtual device disassembly
-     8  Data journey simulator
-     9  Hardware experiment laboratory
-     10 Build your own computer
-     11 Knowledge centre
-     12 Interactive assessments
-     13 Project documentation
-     14 Boot sequence
-   ========================================================================= */
-
 /* ============================================================================
    TECHVERSE · PART 1 — CORE ENGINE
    ----------------------------------------------------------------------------
@@ -559,7 +535,6 @@
   /** Create an element with optional class, text and attributes in one call. */
   function makeElement(tagName, options = {}) {
     const element = document.createElement(tagName);
-    if (options.className) element.className = options.className;
     if (options.text !== undefined) element.textContent = options.text;
     if (options.html !== undefined) element.innerHTML = options.html;
     if (options.attrs) {
@@ -847,7 +822,7 @@
       }
       observeVisibility(this.canvas, isVisible => {
         this.visible = isVisible;
-        if (isVisible && this.canvas.closest('.lab-section') && !this.canvas.closest('.lab-section').hidden) {
+        if (isVisible && this.canvas.closest('[data-lab-section]') && !this.canvas.closest('[data-lab-section]').hidden) {
           this.resume();
         } else {
           this.pause();
@@ -1006,7 +981,7 @@
       const stage = this;
       requestFrame(() => {
         stage.dirtyRequested = false;
-        if (stage.canvas && !stage.canvas.closest('.lab-section')?.hidden) {
+        if (stage.canvas && !stage.canvas.closest('[data-lab-section]')?.hidden) {
           stage.draw(performance.now() / 1000);
         }
       });
@@ -1072,7 +1047,7 @@
         }
         anyRunning = true;
         if (!stage.visible) return;
-        const section = stage.canvas && stage.canvas.closest('.lab-section');
+        const section = stage.canvas && stage.canvas.closest('[data-lab-section]');
         if (section && section.hidden) return;
         stage.time = (stage.time || 0) + dt;
         stage.draw(now / 1000);
@@ -1113,7 +1088,7 @@
           const stage = stages.get(entry.target.id);
           if (stage) {
             stage.visible = entry.isIntersecting;
-            if (entry.isIntersecting && !entry.target.closest('.lab-section')?.hidden) stage.resume();
+            if (entry.isIntersecting && !entry.target.closest('[data-lab-section]')?.hidden) stage.resume();
             else stage.pause();
           }
         });
@@ -1551,7 +1526,7 @@
     const hook = sectionHooks[state.activeSection];
     if (progress.settings.motion) {
       if (hook && typeof hook.enter === 'function') hook.enter();
-      stages.forEach(stage => { if (stage.canvas && !stage.canvas.closest('.lab-section')?.hidden) stage.resume(); });
+      stages.forEach(stage => { if (stage.canvas && !stage.canvas.closest('[data-lab-section]')?.hidden) stage.resume(); });
       announce('Animations resumed');
     } else {
       stages.forEach(stage => stage.draw(performance.now() / 1000));
@@ -1628,7 +1603,7 @@
         const hook = sectionHooks[state.activeSection];
         if (hook && typeof hook.refresh === 'function') hook.refresh();
         stages.forEach(stage => {
-          if (stage.canvas && !stage.canvas.closest('.lab-section')?.hidden) stage.resume();
+          if (stage.canvas && !stage.canvas.closest('[data-lab-section]')?.hidden) stage.resume();
         });
       }
     });
@@ -2225,7 +2200,7 @@
     controls.forEach(control => {
       if (!control) return;
       if (control.type === 'range') {
-        const wrap = TV.makeElement('label', { className: 'control control-range', parent: container });
+        const wrap = TV.makeElement('label', { parent: container });
         const head = TV.makeElement('span', { parent: wrap });
         TV.makeElement('span', { text: control.label + ' ', parent: head });
         const output = TV.makeElement('output', { text: formatValue(control, settings[control.id]), parent: head });
@@ -2244,7 +2219,7 @@
         return;
       }
       if (control.type === 'select') {
-        const wrap = TV.makeElement('label', { className: 'control control-field', parent: container });
+        const wrap = TV.makeElement('label', { parent: container });
         TV.makeElement('span', { text: control.label, parent: wrap });
         const select = TV.makeElement('select', { parent: wrap, attrs: { 'aria-label': control.label } });
         (control.options || []).forEach(option => {
@@ -2258,8 +2233,7 @@
         return;
       }
       if (control.type === 'toggle') {
-        const button = TV.makeElement('button', {
-          className: 'control', parent: container,
+        const button = TV.makeElement('button', { parent: container,
           attrs: { type: 'button', 'aria-pressed': String(Boolean(settings[control.id])) }
         });
         const paint = () => { button.textContent = `${control.label}: ${settings[control.id] ? 'On' : 'Off'}`; };
@@ -2273,11 +2247,11 @@
         return;
       }
       if (control.type === 'buttons') {
-        const group = TV.makeElement('div', { className: 'button-row', parent: container });
-        if (control.label) TV.makeElement('p', { className: 'control-group-label', text: control.label, parent: group });
+        // A marked row keeps the action buttons identifiable without classes.
+        const group = TV.makeElement('div', { parent: container, attrs: { 'data-button-row': true } });
+        if (control.label) TV.makeElement('p', { text: control.label, parent: group });
         (control.buttons || []).forEach(buttonSpec => {
-          const button = TV.makeElement('button', {
-            className: 'control', text: buttonSpec.label, parent: group,
+          const button = TV.makeElement('button', { text: buttonSpec.label, parent: group,
             attrs: { type: 'button', 'data-action': buttonSpec.action }
           });
           button.addEventListener('click', () => onChange('action:' + buttonSpec.action, true));
@@ -2335,33 +2309,33 @@
     if (!card) return;
     TV.clearElement(card);
 
-    const head = TV.makeElement('header', { className: 'lesson-head', parent: card });
-    TV.makeElement('p', { className: 'eyebrow', text: lesson.subtitle, parent: head });
+    const head = TV.makeElement('header', { parent: card });
+    TV.makeElement('p', { text: lesson.subtitle, parent: head });
     TV.makeElement('h3', { text: lesson.name, parent: head });
-    TV.makeElement('p', { className: 'lead-small', text: lesson.summary, parent: head });
+    TV.makeElement('p', { text: lesson.summary, parent: head });
 
     lesson.sections.forEach((section, index) => {
-      const block = TV.makeElement('section', { className: 'lesson-block', parent: card });
+      const block = TV.makeElement('section', { parent: card });
       TV.makeElement('h4', { text: `${index + 1}. ${section.title}`, parent: block });
       TV.makeElement('p', { text: section.body, parent: block });
       if (section.tip) {
-        TV.makeElement('blockquote', { className: 'tip', text: 'Try this: ' + section.tip, parent: block });
+        TV.makeElement('blockquote', { text: 'Try this: ' + section.tip, parent: block });
       }
     });
 
-    const terms = TV.makeElement('details', { className: 'lesson-block disclosure', parent: card });
+    const terms = TV.makeElement('details', { parent: card });
     TV.makeElement('summary', { text: 'Key terms', parent: terms });
-    const termList = TV.makeElement('dl', { className: 'fact-list', parent: terms });
+    const termList = TV.makeElement('dl', { parent: terms });
     lesson.keyTerms.forEach(term => {
       TV.makeElement('dt', { text: term.term, parent: termList });
       TV.makeElement('dd', { text: ' — ' + term.definition, parent: termList });
     });
 
-    const myth = TV.makeElement('section', { className: 'callout callout-warn', parent: card });
+    const myth = TV.makeElement('section', { parent: card });
     TV.makeElement('h4', { text: 'Misconception · ' + lesson.misconception.title, parent: myth });
     TV.makeElement('p', { text: lesson.misconception.fact, parent: myth });
 
-    const real = TV.makeElement('section', { className: 'callout', parent: card });
+    const real = TV.makeElement('section', { parent: card });
     TV.makeElement('h4', { text: 'Real-world example', parent: real });
     TV.makeElement('p', { text: lesson.realWorld, parent: real });
 
@@ -2408,11 +2382,11 @@
     TV.clearElement(nav);
     TV.COMPUTER_LESSONS.forEach(lesson => {
       const button = TV.makeElement('button', {
-        className: 'component-button', parent: nav,
+        parent: nav,
         attrs: { type: 'button', 'data-component': lesson.id }
       });
-      TV.makeElement('span', { className: 'component-icon', text: lesson.icon, parent: button });
-      const text = TV.makeElement('span', { className: 'component-text', parent: button });
+      TV.makeElement('span', { text: lesson.icon, parent: button });
+      const text = TV.makeElement('span', { parent: button });
       TV.makeElement('strong', { text: lesson.name, parent: text });
       TV.makeElement('small', { text: lesson.subtitle, parent: text });
       button.addEventListener('click', () => {
@@ -4549,31 +4523,31 @@
     if (!card) return;
     TV.clearElement(card);
 
-    const head = TV.makeElement('header', { className: 'lesson-head', parent: card });
-    TV.makeElement('p', { className: 'eyebrow', text: lesson.subtitle, parent: head });
+    const head = TV.makeElement('header', { parent: card });
+    TV.makeElement('p', { text: lesson.subtitle, parent: head });
     TV.makeElement('h3', { text: lesson.name, parent: head });
-    TV.makeElement('p', { className: 'lead-small', text: lesson.summary, parent: head });
+    TV.makeElement('p', { text: lesson.summary, parent: head });
 
     lesson.sections.forEach((section, index) => {
-      const block = TV.makeElement('section', { className: 'lesson-block', parent: card });
+      const block = TV.makeElement('section', { parent: card });
       TV.makeElement('h4', { text: `${index + 1}. ${section.title}`, parent: block });
       TV.makeElement('p', { text: section.body, parent: block });
-      if (section.tip) TV.makeElement('blockquote', { className: 'tip', text: 'Try this: ' + section.tip, parent: block });
+      if (section.tip) TV.makeElement('blockquote', { text: 'Try this: ' + section.tip, parent: block });
     });
 
-    const terms = TV.makeElement('details', { className: 'lesson-block disclosure', parent: card });
+    const terms = TV.makeElement('details', { parent: card });
     TV.makeElement('summary', { text: 'Key terms', parent: terms });
-    const termList = TV.makeElement('dl', { className: 'fact-list', parent: terms });
+    const termList = TV.makeElement('dl', { parent: terms });
     lesson.keyTerms.forEach(term => {
       TV.makeElement('dt', { text: term.term, parent: termList });
       TV.makeElement('dd', { text: ' — ' + term.definition, parent: termList });
     });
 
-    const myth = TV.makeElement('section', { className: 'callout callout-warn', parent: card });
+    const myth = TV.makeElement('section', { parent: card });
     TV.makeElement('h4', { text: 'Misconception · ' + lesson.misconception.title, parent: myth });
     TV.makeElement('p', { text: lesson.misconception.fact, parent: myth });
 
-    const real = TV.makeElement('section', { className: 'callout', parent: card });
+    const real = TV.makeElement('section', { parent: card });
     TV.makeElement('h4', { text: 'Real-world example', parent: real });
     TV.makeElement('p', { text: lesson.realWorld, parent: real });
 
@@ -4614,9 +4588,9 @@
     const nav = TV.$('#phone-component-nav');
     TV.clearElement(nav);
     TV.PHONE_LESSONS.forEach(lesson => {
-      const button = TV.makeElement('button', { className: 'component-button', parent: nav, attrs: { type: 'button', 'data-component': lesson.id } });
-      TV.makeElement('span', { className: 'component-icon', text: lesson.icon, parent: button });
-      const text = TV.makeElement('span', { className: 'component-text', parent: button });
+      const button = TV.makeElement('button', { parent: nav, attrs: { type: 'button', 'data-component': lesson.id } });
+      TV.makeElement('span', { text: lesson.icon, parent: button });
+      const text = TV.makeElement('span', { parent: button });
       TV.makeElement('strong', { text: lesson.name, parent: text });
       TV.makeElement('small', { text: lesson.subtitle, parent: text });
       button.addEventListener('click', () => { TV.playTone('click'); renderPhoneLesson(lesson.id); });
@@ -6113,10 +6087,10 @@
     TV.clearElement(list);
     DEVICES[currentDeviceId].parts.forEach((part, index) => {
       const button = TV.makeElement('button', {
-        className: 'chip', parent: list,
+        parent: list,
         attrs: { type: 'button', 'data-part': part.id, 'aria-pressed': String(part.id === selectedPartId) }
       });
-      TV.makeElement('span', { text: `${index + 1}`, className: 'chip-index', parent: button });
+      TV.makeElement('span', { text: `${index + 1}`, parent: button });
       TV.makeElement('span', { text: part.name, parent: button });
       button.addEventListener('click', () => selectComponent(part.id));
     });
@@ -6473,8 +6447,7 @@
       stage.meters.forEach(([label, value]) => {
         TV.makeElement('dt', { text: label, parent: metersNode });
         const dd = TV.makeElement('dd', { parent: metersNode });
-        const bar = TV.makeElement('canvas', {
-          className: 'meter-canvas', parent: dd,
+        const bar = TV.makeElement('canvas', { parent: dd,
           attrs: { width: 130, height: 12, 'aria-label': `${label} ${Math.round(value * 100)} percent` }
         });
         drawMeterCanvas(bar, value);
@@ -6506,7 +6479,7 @@
       const item = TV.makeElement('li', { parent: log });
       const isCurrent = index === simulation.stageIndex;
       const isDone = index < simulation.stageIndex;
-      item.className = isCurrent ? 'stage-current' : isDone ? 'stage-done' : 'stage-pending';
+      item.setAttribute('data-state', isCurrent ? 'current' : isDone ? 'done' : 'pending');
       TV.makeElement('strong', { text: `${index + 1}. ${stage.short}`, parent: item });
       if (isCurrent) TV.makeElement('small', { text: stage.name, parent: item });
     });
@@ -7311,7 +7284,7 @@
     const resultNode = TV.$('#experiment-result');
     if (resultNode) {
       resultNode.textContent = `${result.status} — ${result.detail}`;
-      resultNode.className = 'result-' + result.statusColor;
+      resultNode.setAttribute('data-result', result.statusColor);
     }
     const findings = TV.$('#experiment-findings');
     TV.clearElement(findings);
@@ -8027,9 +8000,9 @@
     if (!host) return;
     TV.clearElement(host);
     SLOTS.forEach(slot => {
-      const card = TV.makeElement('article', { className: 'build-slot', parent: host });
-      const head = TV.makeElement('header', { className: 'build-slot-head', parent: card });
-      TV.makeElement('span', { text: slot.icon, className: 'component-icon', parent: head });
+      const card = TV.makeElement('article', { parent: host });
+      const head = TV.makeElement('header', { parent: card });
+      TV.makeElement('span', { text: slot.icon, parent: head });
       TV.makeElement('h3', { text: slot.label, parent: head });
       const select = TV.makeElement('select', { parent: card, attrs: { 'aria-label': 'Choose ' + slot.label } });
       TV.makeElement('option', { text: '— choose —', parent: select, attrs: { value: '' } });
@@ -8051,7 +8024,7 @@
         TV.saveProgress();
       });
       if (build[slot.key]) {
-        TV.makeElement('p', { className: 'build-slot-note', text: build[slot.key].note || describePart(slot.key, build[slot.key]), parent: card });
+        TV.makeElement('p', { text: build[slot.key].note || describePart(slot.key, build[slot.key]), parent: card });
       }
     });
   }
@@ -8086,7 +8059,7 @@
     if (checks) {
       TV.clearElement(checks);
       report.checks.forEach(check => {
-        const item = TV.makeElement('li', { className: 'check-' + check.level, parent: checks });
+        const item = TV.makeElement('li', { parent: checks, attrs: { 'data-level': check.level } });
         TV.makeElement('strong', { text: check.title + ': ', parent: item });
         TV.makeElement('span', { text: check.detail, parent: item });
       });
@@ -8604,25 +8577,25 @@
 
     TV.clearElement(grid);
     filtered.forEach(entry => {
-      const card = TV.makeElement('article', { className: 'knowledge-card', parent: grid, attrs: { 'data-category': entry.category } });
+      const card = TV.makeElement('article', { parent: grid, attrs: { 'data-category': entry.category } });
       const head = TV.makeElement('header', { parent: card });
       TV.makeElement('h3', { text: entry.term, parent: head });
-      TV.makeElement('span', { className: 'tag tag-' + entry.category, text: entry.category === 'computer' ? 'Computer' : entry.category === 'smartphone' ? 'Smartphone' : 'General', parent: head });
+      TV.makeElement('span', { attrs: { 'data-category': entry.category }, text: entry.category === 'computer' ? 'Computer' : entry.category === 'smartphone' ? 'Smartphone' : 'General', parent: head });
       TV.makeElement('p', { text: entry.definition, parent: card });
-      const beginner = TV.makeElement('p', { className: 'muted', parent: card });
+      const beginner = TV.makeElement('p', { parent: card });
       TV.makeElement('strong', { text: 'In plain words: ', parent: beginner });
       TV.makeElement('span', { text: entry.beginner, parent: beginner });
       if (entry.misconception) {
-        const myth = TV.makeElement('p', { className: 'callout-inline', parent: card });
+        const myth = TV.makeElement('p', { parent: card });
         TV.makeElement('strong', { text: 'Misconception: ', parent: myth });
         TV.makeElement('span', { text: entry.misconception, parent: myth });
       }
       if (entry.example) {
-        const example = TV.makeElement('p', { className: 'muted small', parent: card });
+        const example = TV.makeElement('p', { parent: card });
         TV.makeElement('strong', { text: 'Example: ', parent: example });
         TV.makeElement('span', { text: entry.example, parent: example });
       }
-      const detail = TV.makeElement('details', { className: 'disclosure', parent: card });
+      const detail = TV.makeElement('details', { parent: card });
       TV.makeElement('summary', { text: 'Where to see it live', parent: detail });
       TV.makeElement('p', { text: linkForEntry(entry), parent: detail });
     });
@@ -8685,9 +8658,9 @@
     if (!host) return;
     TV.clearElement(host);
     COMPARISONS.forEach(comparison => {
-      const wrapper = TV.makeElement('section', { className: 'comparison', parent: host });
+      const wrapper = TV.makeElement('section', { parent: host });
       TV.makeElement('h4', { text: comparison.title, parent: wrapper });
-      const scroll = TV.makeElement('div', { className: 'table-scroll', parent: wrapper });
+      const scroll = TV.makeElement('div', { parent: wrapper });
       const table = TV.makeElement('table', { parent: scroll });
       const thead = TV.makeElement('thead', { parent: table });
       const headerRow = TV.makeElement('tr', { parent: thead });
@@ -8700,7 +8673,7 @@
           else TV.makeElement('td', { text: cell, parent: tr });
         });
       });
-      if (comparison.note) TV.makeElement('p', { className: 'muted small', text: comparison.note, parent: wrapper });
+      if (comparison.note) TV.makeElement('p', { text: comparison.note, parent: wrapper });
     });
   }
 
@@ -9162,7 +9135,7 @@
 
     const feedback = TV.$('#assessment-feedback');
     feedback.textContent = '';
-    feedback.className = 'feedback';
+    feedback.setAttribute('data-feedback', 'neutral');
     TV.$('#assessment-next').hidden = true;
 
     const answers = TV.$('#assessment-answers');
@@ -9175,7 +9148,7 @@
       mountIdentifyCanvas(question);
       const labels = identifyOptions(question.scene);
       labels.forEach(option => {
-        const button = TV.makeElement('button', { className: 'answer-button', text: option.label, parent: answers, attrs: { type: 'button', 'data-value': option.id } });
+        const button = TV.makeElement('button', { text: option.label, parent: answers, attrs: { type: 'button', 'data-answer': option.id, 'data-value': option.id } });
         button.addEventListener('click', () => checkIdentifyAnswer(option.id, button));
       });
     } else {
@@ -9183,7 +9156,7 @@
       stopIdentifyStage();
       const options = question.type === 'truefalse' ? ['True', 'False'] : question.options;
       options.forEach((option, index) => {
-        const button = TV.makeElement('button', { className: 'answer-button', text: option, parent: answers, attrs: { type: 'button', 'data-value': index } });
+        const button = TV.makeElement('button', { text: option, parent: answers, attrs: { type: 'button', 'data-answer': index, 'data-value': index } });
         button.addEventListener('click', () => checkAnswer(index, button));
       });
     }
@@ -9218,7 +9191,7 @@
     if (correct) TV.progress.quizzes.correct += 1;
 
     // Highlight answers
-    const buttons = TV.$$('.answer-button', TV.$('#assessment-answers'));
+    const buttons = TV.$$('[data-answer]', TV.$('#assessment-answers'));
     buttons.forEach((answerButton, index) => {
       const value = question.type === 'truefalse' ? index : index;
       if (value === Number(question.answer)) answerButton.setAttribute('data-state', 'correct');
@@ -9229,7 +9202,7 @@
 
     const feedback = TV.$('#assessment-feedback');
     feedback.textContent = (correct ? `✓ Correct (+${gained} XP). ` : '✗ Not quite. ') + question.explain;
-    feedback.className = 'feedback ' + (correct ? 'feedback-good' : 'feedback-bad');
+    feedback.setAttribute('data-feedback', correct ? 'good' : 'bad');
     TV.playTone(correct ? 'good' : 'bad');
 
     if (assessment.streak >= 5) TV.awardBadge('streak-5');
@@ -9263,7 +9236,7 @@
     TV.progress.quizzes.answered += 1;
     if (correct) TV.progress.quizzes.correct += 1;
 
-    const buttons = TV.$$('.answer-button', TV.$('#assessment-answers'));
+    const buttons = TV.$$('[data-answer]', TV.$('#assessment-answers'));
     buttons.forEach(answerButton => {
       if (answerButton.dataset.value === String(question.answer)) answerButton.setAttribute('data-state', 'correct');
       else if (answerButton === button) answerButton.setAttribute('data-state', 'wrong');
@@ -9273,7 +9246,7 @@
 
     const feedback = TV.$('#assessment-feedback');
     feedback.textContent = (correct ? `✓ Correct (+${gained} XP). ` : '✗ Not quite. ') + question.explain;
-    feedback.className = 'feedback ' + (correct ? 'feedback-good' : 'feedback-bad');
+    feedback.setAttribute('data-feedback', correct ? 'good' : 'bad');
     TV.playTone(correct ? 'good' : 'bad');
 
     if (assessment.streak >= 5) TV.awardBadge('streak-5');
@@ -9447,7 +9420,7 @@
         if (type !== 'down') return false;
         const hit = scene.parts.find(part => x >= part.x && x <= part.x + part.w && y >= part.y && y <= part.y + part.h);
         if (hit && !assessment.answeredCurrent) {
-          const button = TV.$$('#assessment-answers .answer-button').find(candidate => candidate.dataset.value === hit.id);
+          const button = TV.$$('#assessment-answers [data-answer]').find(candidate => candidate.dataset.value === hit.id);
           if (button) checkIdentifyAnswer(hit.id, button);
           else checkIdentifyAnswer(hit.id, TV.$('#assessment-answers'));
         }
@@ -9488,15 +9461,19 @@
           a quiz engine with persistent progress.</p>
 
           <h3>Technology rules followed</h3>
-          <ul class="fact-list">
+          <ul>
             <li>One self-contained <code>index.html</code>, works offline from <code>file://</code>.</li>
             <li>Semantic HTML5, native form controls and the Canvas API only.</li>
-            <li>No CSS of any kind: no style tags, no inline styles, no class-based styling that carries visual meaning.</li>
+            <li>No CSS of any kind — not just "no stylesheets": no <code>&lt;style&gt;</code> element, no
+              <code>style=</code> attribute, no class attributes, no <code>classList</code>, and no
+              <code>element.style</code> writes anywhere in the script.</li>
             <li>No frameworks, no libraries, no external APIs, no backend, no build step.</li>
             <li>All graphics — the header logo, every diagram, progress bars and small meters — are Canvas
               drawings; the surrounding text is plain semantic HTML.</li>
+            <li>Script hooks are <code>id</code> and <code>data-*</code> attributes, never classes, so the
+              browser has nothing to apply a style rule to even if a stylesheet were added.</li>
           </ul>
-          <p class="callout-inline"><strong>So what does the page look like?</strong> The HTML shell keeps the
+          <p><strong>So what does the page look like?</strong> The HTML shell keeps the
           browser's own default appearance — black text on white, default headings, default buttons and inputs.
           Every visual idea lives inside the canvases: each one paints its own dark panel, grid, titles,
           meters and diagrams with <code>fillRect</code>, <code>arc</code>, gradients and <code>fillText</code>.
@@ -9507,7 +9484,7 @@
           <p>The script is split into clearly numbered parts. Each part is an IIFE
           (<em>immediately invoked function expression</em>) that offers its tools through one global
           object, <code>window.TECHVERSE</code>, so modules never need private cross-references.</p>
-          <ol class="stage-log">
+          <ol>
             <li><strong>Part 1 · Core engine</strong> — DOM helpers, palette, CanvasStage, storage, router, sound.</li>
             <li><strong>Part 2 · Computer content</strong> — ten component lessons as plain data.</li>
             <li><strong>Part 3 · Computer renderer + CPU/RAM scenes</strong>.</li>
@@ -9536,7 +9513,7 @@
           browsing), every write fails silently and the app keeps working for the session.</p>
 
           <h3>Performance strategy</h3>
-          <ul class="fact-list">
+          <ul>
             <li>One shared <code>requestAnimationFrame</code> loop drives every running Canvas — not one loop per Canvas.</li>
             <li>An <code>IntersectionObserver</code> pauses scenes that scroll out of view.</li>
             <li>Hidden sections are never drawn; switching section stops all loops first.</li>
@@ -9667,9 +9644,9 @@
           <p>${groups.reduce((sum, group) => sum + group[1].length, 0)} named functions and methods, grouped by
           the part of the file that owns them. Helper names are shown with <code>()</code>.</p>
           ${groups.map(([title, rows]) => `
-            <section class="docs-group">
+            <section>
               <h4>${title}</h4>
-              <div class="table-scroll">
+              <div>
                 <table>
                   <thead><tr><th scope="col">Function</th><th scope="col">What it does</th></tr></thead>
                   <tbody>${rows.map(([name, description]) => `<tr><td><code>${name}</code></td><td>${description}</td></tr>`).join('')}</tbody>
@@ -9704,7 +9681,7 @@
           </ol>
 
           <h3>How a frame is drawn</h3>
-          <pre class="code-block">draw(api, time) {
+          <pre>draw(api, time) {
   Draw.background(api);              // grid + vignette
   drawBoard(api);                    // static geometry
   drawPackets(api, time);            // motion driven by time
@@ -9731,7 +9708,7 @@
           accessible and honest about the restriction.</p>
 
           <h3>Animation techniques used</h3>
-          <ul class="fact-list">
+          <ul>
             <li><strong>Time-based motion</strong> — positions come from <code>Math.sin(time)</code> and modulo
             arithmetic, so speed is independent of frame rate.</li>
             <li><strong>Packets on paths</strong> — a packet's position is a parametric distance along a
@@ -9759,7 +9736,7 @@
         return `
           <h3>The data journey model</h3>
           <p>Seven stages, each with a duration, a set of active components and a meter snapshot:</p>
-          <ol class="stage-log">
+          <ol>
             <li>Launch request — input event reaches the OS.</li>
             <li>OS asks storage for the program files.</li>
             <li>Files are copied into RAM.</li>
@@ -9774,7 +9751,7 @@
           teaching model in the interface.</p>
 
           <h3>Experiment models</h3>
-          <div class="table-scroll">
+          <div>
             <table>
               <thead><tr><th scope="col">Experiment</th><th scope="col">Model</th><th scope="col">Concept taught</th></tr></thead>
               <tbody>
@@ -9787,11 +9764,11 @@
               </tbody>
             </table>
           </div>
-          <p class="sim-note">Every number is generated by these small formulas on this page. Nothing is
+          <p>Every number is generated by these small formulas on this page. Nothing is
           measured from real hardware and no result is presented as a benchmark.</p>
 
           <h3>Accuracy commitments</h3>
-          <ul class="fact-list">
+          <ul>
             <li><strong>RAM versus storage.</strong> RAM is volatile working memory; storage is non-volatile. Programs are copied from storage into RAM before execution.</li>
             <li><strong>CPU versus GPU.</strong> The CPU excels at sequential, branchy work; the GPU at parallel repeated work. Neither replaces the other.</li>
             <li><strong>SoC.</strong> A phone SoC integrates CPU, GPU, NPU, ISP and modem; the CPU is one block, not the whole chip.</li>
@@ -9816,39 +9793,39 @@
       build() {
         return `
           <h3>Likely questions — and short, confident answers</h3>
-          <details class="disclosure" open><summary>“Why did you choose Canvas instead of normal HTML and CSS?”</summary>
+          <details open><summary>“Why did you choose Canvas instead of normal HTML and CSS?”</summary>
             <p>The brief allowed only HTML and JavaScript. Canvas let me build a genuinely graphical laboratory —
             diagrams, animations and an interface — without a single CSS rule. It also forced me to understand
             drawing coordinates, scaling and animation timing, which is the core of this project.</p></details>
-          <details class="disclosure"><summary>“How do you animate without a library?”</summary>
+          <details><summary>“How do you animate without a library?”</summary>
             <p>One shared <code>requestAnimationFrame</code> loop ticks every visible scene. Each scene computes
             positions from elapsed time, so pausing simply stops ticking. A delta-time cap keeps motion stable
             when the browser stutters.</p></details>
-          <details class="disclosure"><summary>“What happens when RAM is full?”</summary>
+          <details><summary>“What happens when RAM is full?”</summary>
             <p>The operating system first frees caches, then pages cold memory to a swap file on storage. Storage
             is far slower, so the machine slows down. If swap also fills, apps are terminated. Experiment A
             demonstrates exactly that trade-off.</p></details>
-          <details class="disclosure"><summary>“What is the difference between a CPU and a GPU?”</summary>
+          <details><summary>“What is the difference between a CPU and a GPU?”</summary>
             <p>A CPU has a few powerful cores for sequential, branchy code. A GPU has many small cores that do the
             same operation on lots of pixels at once. For rendering, parallel is the winning shape.</p></details>
-          <details class="disclosure"><summary>“Is a smartphone just a small PC?”</summary>
+          <details><summary>“Is a smartphone just a small PC?”</summary>
             <p>The idea is the same — fetch, compute, display, store — but the implementation is different. Most of
             the computer sits in one SoC with a shared memory pool, and power and heat budgets are far tighter.</p></details>
-          <details class="disclosure"><summary>“How do you know the numbers in the experiments are right?”</summary>
+          <details><summary>“How do you know the numbers in the experiments are right?”</summary>
             <p>They are not measurements; they are formula-driven teaching models. The formulas encode the
             direction and the reason for each effect (for example, overflow must go to slower storage). Every
             screen says so, and the explanations describe real behaviour without claiming lab accuracy.</p></details>
-          <details class="disclosure"><summary>“How is progress saved?”</summary>
+          <details><summary>“How is progress saved?”</summary>
             <p>One JSON object in <code>localStorage</code>, merged with defaults on load, with try/catch so private
             browsing cannot crash the app. The answer key never touches the network.</p></details>
-          <details class="disclosure"><summary>“How would you extend it?”</summary>
+          <details><summary>“How would you extend it?”</summary>
             <p>Content is data: add a lesson object, a quiz object or a part to the catalogue. The renderers and
             the compatibility engine pick them up automatically. A new scene only needs a draw function.</p></details>
-          <details class="disclosure"><summary>“What was the hardest bug?”</summary>
+          <details><summary>“What was the hardest bug?”</summary>
             <p>Stopping animation correctly. At first, hidden sections kept drawing and mobile devices heated up.
             The fix was a single global loop, a visibility observer and explicit pause on section change. It also
             made the "Motion" toggle trivial to implement.</p></details>
-          <details class="disclosure"><summary>“Which part are you most proud of?”</summary>
+          <details><summary>“Which part are you most proud of?”</summary>
             <p>The data journey, because it connects every component into one story, and the mistake-proof
             compatibility engine, because it shows that hardware knowledge is rules, not brand names.</p></details>
         `;
@@ -9861,7 +9838,7 @@
       build() {
         return `
           <h3>Suggested demonstration sequence (about six minutes)</h3>
-          <ol class="stage-log">
+          <ol>
             <li><strong>0:00 – 0:30 · The hook.</strong> Open the app. Say: "This is a hardware laboratory. No CSS,
             no libraries — everything you see is drawn with JavaScript on a Canvas." Point at the header logo and
             the grid.</li>
@@ -9890,7 +9867,7 @@
           </ol>
 
           <h3>Tips for the live demo</h3>
-          <ul class="fact-list">
+          <ul>
             <li>Use the number keys <kbd>1</kbd>–<kbd>9</kbd> to jump between sections quickly.</li>
             <li>Have the judge pick the experiment values — it makes the result feel live.</li>
             <li>If time is short, skip the storage comparison and go straight to the data journey.</li>
