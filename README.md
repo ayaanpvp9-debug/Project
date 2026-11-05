@@ -7,8 +7,13 @@ Open `index.html` in any modern browser (double-click works — no server, no in
 
 ## The rule that shapes the whole project
 
-Only HTML5, vanilla ES6 JavaScript and the Canvas API. **No CSS in any form** — no `<style>`,
-no `style=` attributes, no stylesheets, no frameworks, no libraries, no external APIs, no backend.
+Only HTML5, vanilla ES6 JavaScript and the Canvas API. **No CSS in any form** — no `<style>`
+element, no `style=` attributes, no stylesheet link, no `@import`, and no `element.style` writes in
+the script. There is no stylesheet in the file at all.
+
+`class` attributes are present, but only as **JavaScript hooks** — the same job an `id` does. With
+zero stylesheets in the document, no class name can match any rule, so no class can change a pixel.
+Every visual is painted by Canvas: 233 class hooks, 0 CSS rules.
 
 The HTML shell therefore keeps the browser's default appearance, and every visual idea is painted
 inside a canvas: dark panels, grids, diagrams, meters, the header logo, even the progress bars.
@@ -51,3 +56,21 @@ student's own machine. Sources of the physics that are simplified are explained 
 The deliverable is the committed `index.html`. The authoring sources live outside this repository
 (`build/` + a compiler script) and are compiled into the single file; the shipped file has no build
 step and no dependencies.
+
+## Verification
+
+`node verify.js` (in `validation/`) loads this exact file in jsdom with a real Canvas 2D backend and
+runs **35 checks** covering every section, control, scene and assessment mode.
+
+**Last result: 35/35 passed, no runtime errors**, plus 44 rendered screenshots at 1024 px and again
+at 400 px wide. Measured on the shipped file:
+
+| Audit item | Count |
+|---|---|
+| `<style>` elements / `style=` attributes / stylesheet links | 0 / 0 / 0 |
+| `element.style` writes, `setProperty`, `cssText`, `getComputedStyle`, CSSOM | 0 |
+| `@import`, `@media`, `@font-face` | 0 |
+| External URLs, inline `on*` handlers, `javascript:` URLs | 0 |
+| `<script>` tags | 1 |
+| Canvas elements | 11 (15 with dynamically mounted stages) |
+| `class` attributes (JS hooks only) | 233 |
